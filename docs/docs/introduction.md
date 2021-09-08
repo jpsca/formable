@@ -1,5 +1,5 @@
 
-# Crash course
+# Introduction
 
 ## Key Concepts
 
@@ -12,7 +12,21 @@
 
 ## Diving into it
 
-This is an example of a simple form connected to a Model:
+This is an example of a simple form:
+```python
+# forms.py
+from hyperform import Form, Text, LongerThan
+
+
+class MessageForm(Form):
+    your_name = Text(required=True)
+    message = Text(
+        LongerThan(5, "Please write a longer message"),
+        required=True
+    )
+```
+
+And this is the same form connected to a Model:
 
 ```python
 # forms.py
@@ -21,7 +35,7 @@ from .models import db, Message
 
 
 class BaseForm(SQLAForm):
-    _session = db.session
+    _session = db.scoped_session
 
 
 class MessageForm(BaseForm):

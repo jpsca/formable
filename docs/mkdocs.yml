@@ -1,7 +1,13 @@
----
+site_name: HyperForm
+site_description: A non-terrible Python form library
+site_url: https://jpsca.github.io/hyperform
+repo_url: https://github.com/jpsca/hyperform
+repo_name: jpsca/hyperform
+copyright: Copyright &copy; 2019 - 2021 Juan-Pablo Scaletti
+
 nav:
-  - Welcome: index.md
-  - crash.md
+  - Home: index.md
+  - introduction.md
   - forms.md
   - fields.md
   - rendering.md
@@ -10,56 +16,62 @@ nav:
   - orm.md
   - FAQ: faq.md
 
-site_name: HyperForm
-site_description: A not-terrible Python form library.
-site_author: Juan-Pablo Scaletti
-site_url: https://github.com/jpsca/hyperform
-
-repo_name: jpsca/hyperform
-repo_url: https://github.com/jpsca/hyperform
-edit_uri: ""
-
 theme:
   name: material
+  logo: assets/img/logo.svg
+  favicon: assets/img/favicon.svg
+  font:
+    text: Convergence
+    code: Roboto Mono
+  custom_dir: overrides
+  language: en
   features:
-    - instant
+    - navigation.indexes
+    - navigation.tracking
+    - navigation.top
+    - search.suggest
+    - search.highligh
   icon:
-    logo: material/cloud
+    repo: material/github
   palette:
+  - media: "(prefers-color-scheme: light)"
+    scheme: default
     primary: red
     accent: pink
-  language: en
+    toggle:
+      icon: octicons/sun-16
+      name: Switch to dark mode
+  - media: "(prefers-color-scheme: dark)"
+    scheme: slate
+    primary: red
+    accent: pink
+    toggle:
+      icon: octicons/moon-16
+      name: Switch to light mode
 
 extra_css:
-  - css/colorful.css
-  # - css/monokai.css
-  - css/extra.css
-
-# Customization
-extra:
-  # manifest: "manifest.webmanifest"
-  social:
-    - icon: fontawesome/brands/github-alt
-      link: https://github.com/jpsca/hyperform
+  - assets/css/common.css
+  - assets/css/highlight.css
+extra_javascript:
+  # - assets/js/termynal.js
+edit_uri: ""
+plugins:
+  - search
 
 markdown_extensions:
   - admonition
   - attr_list
-  - codehilite:
-      css_class: highlight
-      guess_lang: false
   - smarty
+  - tables
   - toc:
       permalink: "#"
       toc_depth: 4
-  - markdown.extensions.tables
   - pymdownx.betterem:
       smart_enable: all
   - pymdownx.caret
   - pymdownx.details
-  - pymdownx.emoji:
-      emoji_generator: !!python/name:pymdownx.emoji.to_svg
-  # - pymdownx.inlinehilite
+  - pymdownx.highlight
+  - pymdownx.keys
   - pymdownx.magiclink
   - pymdownx.mark
   - pymdownx.smartsymbols

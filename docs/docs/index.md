@@ -1,15 +1,12 @@
-
-# HyperForm Intro
-
-HyperForm is a library to make far easier to create beautiful, semantically rich, syntactically awesome, readily stylable and wonderfully accessible HTML forms in your Python web application.
-
+---
+template: home.html
+---
 <blockquote style="max-width:480px; margin:0 auto;">
-<p>The main problem I used to have with it was the markup.
-<br>I wanted Bootstrap <em>classes</em>.
-<br>I wanted <em>complex layouts</em> like multiple columns.</p>
-<footer>— <cite>Random Redditor</cite></footer>
+    <p>The main problem I used to have with it was the markup.
+    <br>I wanted Bootstrap <em>classes</em>.
+    <br>I wanted <em>complex layouts</em> like multiple columns.</p>
+    <footer>— <cite>Random Redditor</cite></footer>
 </blockquote>
-
 
 ## How HyperForm is different
 
@@ -51,11 +48,14 @@ def comment():
 
 ## Installation
 
-```python
-# Create a virtual environment
-python -m venv .venv
-# Activate said environment
-source .venv/bin/activate
-# Install the library
+Install the package using `pip`.
+
+```bash
 pip install hyperform
 ```
+
+## Resources
+
+- [Source code (MIT Licensed)](https://github.com/jpsca/hyperform)
+- [PyPI](https://pypi.org/project/hyperform/)
+- [Change log](https://github.com/jpsca/hyperform/releases)

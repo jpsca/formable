@@ -12,6 +12,10 @@ class LoginForm(Form):
     login = Email(required=True)
     password = Password(required=True)
 
+...
+
+
+@route("/sign-in")
 def login():
     form = LoginForm(request.POST)
     if request.method == "POST" and form.validate():

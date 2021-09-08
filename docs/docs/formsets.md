@@ -1,16 +1,16 @@
 
 # Form sets
 
-Form sets are the secret weapon ofthis library. Imagine you have models like this:
+Imagine you have models like this:
 
-![Person has many websites](img/form-set-model.png){: width=400 }
+![Person has many websites](assets/img/form-set-model.png){: width=400 }
 {: style=text-align:center }
 
 With most form libraries, you would need to have a page for creating/updating the URLs and, only then, you would be able to create/update the person data. What a waste of time!
 
 With a form set, you can create/update the person *and* its URLs at the same time, in a single form.
 
-[![Form set form](img/form-set-form.png)](img/form-set-form.png)
+[![Form set form](assets/img/form-set-form.png)](assets/img/form-set-form.png)
 
 To do so, you need to create two forms, one for the person data, and other for a website, and connect them like this:
 
@@ -193,7 +193,7 @@ When that's the case, the `backref` attribute is something you might need to add
 
 #### Without backref
 
-![Without backref](img/without-backref.png)
+![Without backref](assets/img/without-backref.png)
 
 **Without** a `backref` attribute, HyperForm will try to save the child forms first, and them assign the list of them to the parent form. If you are dealing with models instead of dictionaries, your database might not like that.
 
@@ -232,7 +232,7 @@ class PersonForm(Form):
 
 When HyperForm receives a `backref`, it reverse the order of the form saving. Now first it creates the parent object, and then the child objects using the parent object as an attribute.
 
-![With backref](img/with-backref.png)
+![With backref](assets/img/with-backref.png)
 
 In this way, no database constraints are broken and the saving of the form finish without problems.
 
@@ -272,9 +272,3 @@ default_error_messages = {
 ```
 
 The `error_messages` argument allows you to overwrite all or one of these messages by passing a dictionary with your custom error messages for those validations.
-
-
-## Adding new forms with JavaScript
-
-[ TODO ]
-

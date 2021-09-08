@@ -55,8 +55,3 @@ For bugs and feature requests, you can open an issue on the [GitHub page](https:
 ## Does HyperForm handle file uploads or image thumbanils?
 
 It does not. Those are concerns for your framework or for other specialized libraries. HyperForm has a `File` field which will let you render a file input, but it doesn't do more than that.
-
-
-## I have a question not covered in this documentation
-
-Please open an issue on the [GitHub page](https://github.com/jpsca/hyperform) with the tag "question".
