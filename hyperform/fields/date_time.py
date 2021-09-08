@@ -1,9 +1,7 @@
 from datetime import datetime
 
-from ..ftypes import type_date
-from ..ftypes import type_time
-
 from .text import Text
+from ..ftypes import type_date, type_time
 
 
 __all__ = ("DateTime",)

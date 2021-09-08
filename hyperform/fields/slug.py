@@ -1,6 +1,5 @@
-from ..ftypes import type_slug
-
 from .text import Text
+from ..ftypes import type_slug
 
 
 __all__ = ("Slug",)
@@ -49,7 +48,7 @@ class Slug(Text):
         self,
         *validators,
         max_length=0,
-        separator='-',
+        separator="-",
         stopwords=None,
         regex_pattern=None,
         replacements=None,

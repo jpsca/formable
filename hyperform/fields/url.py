@@ -1,5 +1,4 @@
 from .text import Text
-
 from ..ftypes import type_url
 
 

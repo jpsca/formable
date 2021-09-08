@@ -1,6 +1,5 @@
-from ..ftypes import type_boolean
-
 from .text import Text
+from ..ftypes import type_boolean
 
 
 __all__ = ("Boolean", )

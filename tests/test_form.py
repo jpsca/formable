@@ -1,5 +1,5 @@
 import hyperform as f
-from hyperform.constants import SEP, DELETED
+from hyperform.constants import DELETED, SEP
 
 
 def test_declare_form():

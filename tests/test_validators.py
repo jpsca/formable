@@ -1,11 +1,8 @@
-from datetime import datetime, date
+from datetime import date, datetime
 
 import pytest
 
-from hyperform import Date
-from hyperform import DateTime
-from hyperform import Field
-from hyperform import Integer
+from hyperform import Date, DateTime, Field, Integer
 from hyperform import validators as v
 
 

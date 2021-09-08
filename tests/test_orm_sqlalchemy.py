@@ -1,9 +1,9 @@
-from sqlalchemy import create_engine, Column, Integer, String, ForeignKey
+from sqlalchemy import Column, ForeignKey, Integer, String, create_engine
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker, relationship
+from sqlalchemy.orm import relationship, sessionmaker
 
 import hyperform as f
-from hyperform.constants import SEP, NEW, DELETED
+from hyperform.constants import DELETED, NEW, SEP
 
 
 engine = create_engine("sqlite:///:memory:", echo=True)

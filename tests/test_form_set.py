@@ -1,5 +1,5 @@
 import hyperform as f
-from hyperform.constants import SEP, NEW
+from hyperform.constants import NEW, SEP
 
 
 def test_declare_form_set():

@@ -47,7 +47,7 @@ def test_required_empty():
 
 def test_required_blank():
     field = Text(required=True)
-    field.input_values == [""]
+    field.input_values = [""]
     assert field.validate() is None
     assert field.error == "This field is required."
 

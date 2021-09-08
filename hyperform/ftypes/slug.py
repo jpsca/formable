@@ -7,7 +7,7 @@ __all__ = ("type_slug", )
 def type_slug(
     value,
     max_length=0,
-    separator='-',
+    separator="-",
     stopwords=None,
     regex_pattern=None,
     replacements=None,

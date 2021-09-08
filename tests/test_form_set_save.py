@@ -1,7 +1,7 @@
 import pytest
 
 import hyperform as f
-from hyperform.constants import SEP, NEW, ID, DELETED
+from hyperform.constants import DELETED, ID, NEW, SEP
 
 
 class MyModel(object):

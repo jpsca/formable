@@ -1,4 +1,5 @@
-from datetime import date, time, datetime
+from datetime import date, datetime, time
+
 import pytest
 
 from hyperform import fields as f

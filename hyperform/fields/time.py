@@ -1,6 +1,5 @@
-from ..ftypes import type_time
-
 from .text import Text
+from ..ftypes import type_time
 
 
 __all__ = ("Time", )

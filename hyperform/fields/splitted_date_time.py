@@ -1,9 +1,7 @@
 from datetime import datetime
 
-from ..ftypes import type_date
-from ..ftypes import type_time
-
 from .splitted import Splitted
+from ..ftypes import type_date, type_time
 
 
 __all__ = ("SplittedDateTime", )

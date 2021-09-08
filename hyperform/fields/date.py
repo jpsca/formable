@@ -1,6 +1,5 @@
-from ..ftypes import type_date
-
 from .text import Text
+from ..ftypes import type_date
 
 
 __all__ = ("Date", )

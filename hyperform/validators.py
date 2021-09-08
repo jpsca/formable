@@ -1,5 +1,5 @@
-from itertools import groupby
 import datetime
+from itertools import groupby
 
 
 __all__ = (

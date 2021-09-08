@@ -8,7 +8,6 @@ __all__ = ("FieldRenderable", "get_html_attrs", "in_")
 
 
 class FieldRenderable(object):
-
     def render_attrs(self, **attrs):
         html = get_html_attrs(attrs, show_error=self.error)
         return Markup(html)
@@ -204,7 +203,7 @@ class FieldRenderable(object):
         """
         attrs["label"] = escape_silent(str(label))
         html_attrs = get_html_attrs(attrs, show_error=self.error)
-        html = ['<optgroup {}>'.format(html_attrs)]
+        html = ["<optgroup {}>".format(html_attrs)]
 
         for item in items:
             oplabel, opvalue = item[:2]
@@ -243,11 +242,13 @@ class FieldRenderable(object):
             return ""
 
         attrs.setdefault("classes", "error")
-        return Markup("<{tag} {attrs}>{error}</{tag}>".format(
-            tag=tag,
-            attrs=get_html_attrs(attrs, show_error=False),
-            error=self.error,
-        ))
+        return Markup(
+            "<{tag} {attrs}>{error}</{tag}>".format(
+                tag=tag,
+                attrs=get_html_attrs(attrs, show_error=False),
+                error=self.error,
+            )
+        )
 
 
 def in_(value, values):

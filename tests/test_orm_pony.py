@@ -4,7 +4,7 @@ except ImportError:
     orm = None
 
 import hyperform as f
-from hyperform.constants import SEP, NEW, DELETED
+from hyperform.constants import DELETED, NEW, SEP
 
 
 if orm:

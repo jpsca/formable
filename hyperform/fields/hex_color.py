@@ -1,6 +1,5 @@
-from ..ftypes import type_hex_color
-
 from .text import Text
+from ..ftypes import type_hex_color
 
 
 __all__ = ("HexColor",)

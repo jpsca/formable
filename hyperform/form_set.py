@@ -1,4 +1,4 @@
-from .constants import SEP, NEW
+from .constants import NEW, SEP
 from .utils import get_object_value
 
 
