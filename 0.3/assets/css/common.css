@@ -17,12 +17,24 @@ body[data-md-color-scheme="default"] {
 .md-typeset code {
     font-size: 0.95em;
 }
+
 .md-nav__title .md-nav__button.md-logo img,
 .md-nav__title .md-nav__button.md-logo svg,
 .md-header__button.md-logo img,
 .md-header__button.md-logo svg {
     height: auto !important;
 }
-.md-footer {
-    margin-top: 40px;
+
+.older-docs {
+    width: 100%;
+    padding: 12px;
+    background-color: gold;
+    color: #000;
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.4;
+}
+.older-docs a {
+    color: var(--md-typeset-a-color);
+    text-decoration: underline;
 }

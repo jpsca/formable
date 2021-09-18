@@ -386,21 +386,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../formsets/" class="md-nav__link">
-        Form sets
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../orm/" class="md-nav__link">
         ORM integration
       </a>
@@ -419,6 +404,48 @@
       <a href="../faq/" class="md-nav__link">
         FAQ
       </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      <label class="md-nav__link" for="__nav_9">
+        Older versions
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Older versions" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Older versions
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0.3/" class="md-nav__link">
+        v0.3
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -478,11 +505,10 @@
                 <h1 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">#</a></h1>
 <h2 id="key-concepts">Key Concepts<a class="headerlink" href="#key-concepts" title="Permanent link">#</a></h2>
 <ul>
-<li><code>Form</code>s are the core container of HyperForm, they are classes that group fields and/or formsets and, sometimes, connect them to models.</li>
+<li><code>Form</code>s are the core container of HyperForm, they are classes that group fields and connect them to models.</li>
 <li>Fields do most of the heavy lifting. Each field represents a data type and the field handles coercing form the input string to that datatype. They can also run validations on the values.</li>
 <li>Every field can be rendered as any form widget (inputs, selects, checboxes), even if a particular widget don&rsquo;t make sense for the data type.</li>
 <li>In order to specify validation rules, fields contain a list of validator functions.</li>
-<li>Formsets are lists of subforms. You can control if adding new forms or deleting old ones is allowed.</li>
 </ul>
 <h2 id="diving-into-it">Diving into it<a class="headerlink" href="#diving-into-it" title="Permanent link">#</a></h2>
 <p>This is an example of a simple form:

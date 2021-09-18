@@ -339,21 +339,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../formsets/" class="md-nav__link">
-        Form sets
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../orm/" class="md-nav__link">
         ORM integration
       </a>
@@ -460,6 +445,48 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      <label class="md-nav__link" for="__nav_9">
+        Older versions
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Older versions" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Older versions
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0.3/" class="md-nav__link">
+        v0.3
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -574,13 +601,10 @@
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">PonyForm</span><span class="p">(</span><span class="n">Form</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">create_object</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="p">(</span><span class="o">**</span><span class="n">data</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">delete_object</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_object</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
 </code></pre></div>
 <p>That&rsquo;s it.</p>
 <h2 id="what-versions-of-python-are-supported">What versions of Python are supported?<a class="headerlink" href="#what-versions-of-python-are-supported" title="Permanent link">#</a></h2>
-<p>Python 3.6 and beyond.</p>
+<p>Python 3.7 and newer.</p>
 <h2 id="is-hyperform-an-async-library">Is HyperForm an async library?<a class="headerlink" href="#is-hyperform-an-async-library" title="Permanent link">#</a></h2>
 <p>No.</p>
 <p>(However, you can use <code>loop.run_in_executor()</code> to run it from asyncio, without blocking the main event loop).</p>
@@ -627,6 +651,21 @@
           </div>
         </a>
       
+      
+        
+        <a href="../0.3/" class="md-footer__link md-footer__link--next" aria-label="Next: v0.3" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              v0.3
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
       
     </nav>
   
