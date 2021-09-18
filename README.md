@@ -1,24 +1,19 @@
-# HyperForm
-
-[![Coverage Status](https://coveralls.io/repos/github/jpsca/hyperform/badge.svg?branch=master)](https://coveralls.io/github/jpsca/hyperform?branch=master)
-[![](https://travis-ci.org/jpsca/hyperform.svg?branch=master)](https://travis-ci.org/jpsca/hyperform/)
+![HyperForm](header.png)
 
 HyperForm is a library to make far easier to create beautiful, semantically rich, syntactically awesome, readily stylable and wonderfully accessible HTML forms in your Python web application.
 
-Documentation: https://jpsca.github.io/hyperform/
+**Documentation**: https://jpsca.github.io/hyperform/
 
 
 ## How HyperForm is different
-
-- Your form can have nested subforms, to create or update several objects, in the same page, at once. No need for modals or separated pages.
-
-- Any field can accept multiple values; as a list or as a comma-separated text.
 
 - A field isn't tied to a specific HTML tag, so can be presentend in multiple ways. Even the same form can be used in different contexts and have different widgets and styles on each.
 
 - Incredible easy to integrate with any ORM (object-relational mapper). Built-in adaptators for SQLAlchemy and Pony.
 
-- Commonly used built-in validators, but you can write simple functions to use as custom ones.
+- Many commonly used built-in validators, and you can also write simple functions to use as custom ones.
+
+- Any field can accept multiple values; as a list or as a comma-separated text.
 
 - All error messages are editable. We are not robots, the tone of the messages must be able to change or to be translated.
 

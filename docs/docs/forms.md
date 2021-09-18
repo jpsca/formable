@@ -68,10 +68,6 @@ Optional namespace for the form.
 
 [ TODO ]
 
-### delete_object()
-
-[ TODO ]
-
 ### load_data()
 
 This method can be used to replace the data passed when instantiating the form.

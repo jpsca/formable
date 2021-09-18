@@ -12,9 +12,10 @@ nav:
   - fields.md
   - rendering.md
   - validators.md
-  - formsets.md
   - orm.md
   - FAQ: faq.md
+  - Older versions:
+    - v0.3: 0.3/index.html
 
 theme:
   name: material

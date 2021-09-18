@@ -1,10 +1,8 @@
 import hyperform as f
-from hyperform.constants import DELETED, ID
 
 
 class MyModel(object):
     def __init__(self, **kwargs):
-        kwargs.setdefault("deleted", False)
         for key, value in kwargs.items():
             setattr(self, key, value)
 
@@ -17,9 +15,6 @@ class MyForm(f.Form):
 
     def create_object(self, data):
         return self._model(**data)
-
-    def delete_object(self):
-        self._object.deleted = True
 
 
 def test_save_and_create():
@@ -50,18 +45,6 @@ def test_save_when_invalid():
     assert form.save() is None
 
 
-def test_cant_delete_wont_delete():
-    input_data = {"a": "lorem ipsum", "b": "5", DELETED: "1"}
-    myobj = MyModel(id=42, a="old value", b=0)
-    form = MyForm(input_data, myobj)
-    obj = form.save()
-
-    assert obj == myobj
-    assert obj.a == "lorem ipsum"
-    assert obj.b == 5
-    assert obj.deleted is False
-
-
 def test_no_model_no_created_object():
     class MySimpleForm(MyForm):
         _model = None
@@ -82,4 +65,4 @@ def test_no_model_no_updated_object():
     form = MySimpleForm(input_data, myobj)
     obj = form.save()
 
-    assert obj == {ID: 42, "a": "lorem ipsum", "b": 5}
+    assert obj == {"a": "lorem ipsum", "b": 5}

@@ -1,5 +1,4 @@
 import hyperform as f
-from hyperform.constants import DELETED, SEP
 
 
 def test_declare_form():
@@ -57,9 +56,9 @@ def test_form_independence_prefixes():
         afield = f.Text()
 
     input_data = {
-        f"f1{SEP}afield": "1",
-        f"f2{SEP}afield": "2",
-        f"f3{SEP}afield": "3",
+        f"f1{f.SEP}afield": "1",
+        f"f2{f.SEP}afield": "2",
+        f"f3{f.SEP}afield": "3",
     }
     form1 = AForm(input_data, prefix="f1")
     form2 = AForm(input_data, prefix="f2")
@@ -87,9 +86,9 @@ def test_declare_form_with_prefix():
         "message",
         "subject",
     ]
-    assert form.subject.name == f"myform{SEP}subject"
-    assert form.email.name == f"myform{SEP}email"
-    assert form.message.name == f"myform{SEP}message"
+    assert form.subject.name == f"myform{f.SEP}subject"
+    assert form.email.name == f"myform{f.SEP}email"
+    assert form.message.name == f"myform{f.SEP}message"
 
 
 def test_validate_empty_form():
@@ -285,23 +284,3 @@ def test_dont_overwrite_field_clean_and_prepare():
 
     assert form.meh.custom_prepare == field_prepare
     assert form.meh.custom_clean == field_clean
-
-
-def test_cant_delete_by_default():
-    class ContactForm(f.Form):
-        subject = f.Text(required=True)
-        email = f.Email()
-        message = f.Text(required=True)
-
-    data = {
-        DELETED: "1",
-        "subject": "Hello world",
-        "email": "hello@world.com",
-        "message": "Lorem ipsum.",
-    }
-    form = ContactForm(data)
-
-    assert not form._deleted
-    assert form.subject.value == data["subject"]
-    assert form.email.value == data["email"]
-    assert form.message.value == data["message"]

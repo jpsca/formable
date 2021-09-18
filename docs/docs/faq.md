@@ -25,9 +25,6 @@ For example, this is the *complete* code for the adapter to PonyORM:
 class PonyForm(Form):
     def create_object(self, data):
         return self._model(**data)
-
-    def delete_object(self):
-        return self._object.delete()
 ```
 
 That's it.
@@ -35,7 +32,7 @@ That's it.
 
 ## What versions of Python are supported?
 
-Python 3.6 and beyond.
+Python 3.7 and newer.
 
 
 ## Is HyperForm an async library?
